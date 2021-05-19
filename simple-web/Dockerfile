@@ -5,9 +5,10 @@ FROM alpine
 WORKDIR /usr/app
 
 # Install some dependencies
-COPY ./ ./
+COPY ./package.json ./
 RUN apk add --update nodejs npm
 RUN npm install
+COPY ./ ./
 
 # Default command
 CMD ["npm", "start"]
