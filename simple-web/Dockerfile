@@ -2,6 +2,7 @@
 FROM alpine
 
 # Install some dependencies
+COPY ./ ./
 RUN apk add --update nodejs npm
 RUN npm install
 
